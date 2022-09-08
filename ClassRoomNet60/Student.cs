@@ -8,9 +8,9 @@ namespace ClassRoomNet60
 {
     public class Student
     {
-        public string Name { get; set; }
-        public int BirthMonth { get; set; }
-        public int Birthday { get; set; }
+        public string Name { get; private set; }
+        public int BirthMonth { get; private set; }
+        public int Birthday { get; private set; }
 
         public Student(string name, int birthMonth, int birthday)
         {
@@ -34,23 +34,27 @@ namespace ClassRoomNet60
             {
                 return "Winter";
             }
-            if (BirthMonth >= 3 && BirthMonth <= 5)
+            else if (BirthMonth >= 3 && BirthMonth <= 5)
             {
                 return "Spring";
             }
-            if (BirthMonth >= 6 && BirthMonth <= 8)
+            else if (BirthMonth >= 6 && BirthMonth <= 8)
             {
                 return "Summer";
             }
-            else
+            else if (BirthMonth >= 9 && BirthMonth <= 11)
             {
                 return "Autumn";
+            }
+            else
+            {
+                return "No Season";
             }
         }
 
         public override string ToString()
         {
-            return $"Name: {Name}";
+            return $"Name: {Name}, Birth Month: {BirthMonth}, Birthday: {Birthday}";
         }
     }
 }

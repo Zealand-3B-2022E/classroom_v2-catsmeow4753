@@ -32,15 +32,15 @@ namespace ClassRoomNet60
                 {
                     winter++;
                 }
-                if (result == "Spring")
+                else if (result == "Spring")
                 {
                     spring++;
                 }
-                if (result == "Summer")
+                else if (result == "Summer")
                 {
                     summer++;
                 }
-                else
+                else if (result == "Autumn")
                 {
                     autumn++;
                 }
